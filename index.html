@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Character Encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather & Location Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- Heading -->
+        <h1>🌤 Weather & Location Dashboard</h1>
+
+        <!-- Search Section -->
+        <section class="search-box">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name">
+
+           <button id="searchBtn">
+             Search
+            </button>
+
+              <button id="locationBtn">
+               📍 My Location
+              </button>
+
+        </section>
+
+        <!-- Loading -->
+        <p id="loading" class="hidden">
+
+            Loading weather...
+
+        </p>
+
+        <!-- Error -->
+        <p id="error" class="hidden"></p>
+
+        <!-- Weather Information -->
+        <section id="weatherCard" class="weather-card hidden">
+
+            <h2 id="cityName"></h2>
+
+            <p>
+
+                🌡 Temperature:
+                <span id="temperature"></span>
+
+            </p>
+
+            <p>
+
+                🌤 Weather:
+                <span id="condition"></span>
+
+            </p>
+
+            <p>
+
+                💨 Wind Speed:
+                <span id="wind"></span>
+
+            </p>
+
+        </section>
+
+        <div style="margin-top:15px;">
+
+     <label>
+
+        <input
+            type="checkbox"
+            id="unitToggle">
+
+        Show Fahrenheit
+
+     </label>
+
+     </div>
+
+        <!-- Forecast -->
+        <section id="forecast" class="forecast hidden">
+
+            <h2>Forecast</h2>
+
+            <div id="forecastCards">
+
+            </div>
+
+        </section>
+
+        <!-- Recent Searches -->
+        <section class="recent-searches">
+
+            <h2>Recent Searches</h2>
+
+            <ul id="recentList">
+
+            </ul>
+
+        </section>
+
+    </main>
+
+    <script type="module" src="app.js"></script>
+
+</body>
+
+</html>
